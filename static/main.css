@@ -39,16 +39,32 @@ h6 {
   height: 80%;
 }
 .main{
-  margin-top:1rem;
+  margin-top:3rem;
   padding: 12px;
 }
 .last{
   height: 30vh;
 }
-canvas {
-  border: 3px solid #ff5454;
-  border-radius: 8px;
+#app{
+  background: #384047;
+  color:#fff;
+  padding: 1em;
+  border-radius: 12px;
 }
+#app p{
+  text-align: justify;
+  font-size: 14px;
+}
+canvas {
+  background: #fff;
+  display: block;
+  margin: 50px auto 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 #ff5454;
+  cursor: crosshair;
+  touch-action: none;
+}
+
 #digit {
   color: #17a2b8;
 }
