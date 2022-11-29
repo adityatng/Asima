@@ -37,7 +37,7 @@
 
 				canvas.focus();
 
-				canvas.width  = (window.innerWidth > 300) ? 300 : window.innerWidth;
+				canvas.width  = (window.innerWidth > 200) ? 200 : window.innerWidth;
 				canvas.height = (window.innerHeight > 200) ? 200 : window.innerHeight;
 
 				// If the browser supports the canvas tag, get the 2d drawing context for this canvas
@@ -78,7 +78,7 @@
 
 				ctx.lineCap = "round";
 				ctx.lineJoin = "round";
-				ctx.lineWidth = 10;
+				ctx.lineWidth = 5;
 				ctx.strokeStyle = 'black';
 				ctx.stroke();
 				ctx.closePath();
