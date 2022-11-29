@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" author="adityatng">
+  <title>Asima | Pengenalan Tulisan Tangan Aksara Simalungun</title>
+  <link rel="icon" href="../static/rumah-adat-batak.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/main.css">
+
+</head>
+<body>
+<section id="hero" class="d-flex align-items-center vh-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+            <div>
+              <h1>Asima</h1>
+              <p style="text-align:justify;">Aplikasi pengenalan tulisan tangan Aksara Simalungun. Menggunakan AI sebagai backend yang dapat secara otomatis mendeteksi karakter. Aplikasi ini juga bagian dari <span class="text-danger" style="cursor:pointer;" onclick="location.href='https://bio.link/tataring'">Tataring - AASC</span> .</p>
+            </div>
+          </div>
+          <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img text-center" data-aos="fade-left">
+            <img src="../static/rumah-adat-batak.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+    <p class="text-center mt-5">Silahkan tulis aksara Simalungun di kotak merah, <br> prediksi model akan muncul setelah Anda menekan Prediksi! </p>
+    <div class="section d-flex text-center justify-content-center align-items-center p-3">
+      <div id="app">
+          <canvas id="myCanvas"></canvas>
+      </div>
+      <div class="d-block text-center p-3">
+        <div class="ndiv">
+          <p id="p"></p>
+        </div>
+        <div class="predict align-items-center justify-content-center mb-5">
+          <div class="mx-2 d-flex">
+            <p>Aksara:&nbsp;</p>
+            <span id="digit"></span>
+          </div>
+          <div class="mx-2 d-flex">
+            <p>Akurasi:&nbsp;</p>
+            <span id="accuracy"></span>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="button button-1" onclick="javascript:clearArea();return false;">Bersihkan</button>
+          <button class="button button-2" onclick="javascript:save_image();return false;">Prediksi</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="last"></section>
+ <footer class="text-center py-4 mt-5">
+  &copy; 2022 Asima Powered by <span class="text-primary" style="cursor:pointer;" onclick="location.href='https://t.me/tngstd'">TNGStudio</span>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+ <script src="../static/draw.js"></script> 
+</body>
+</html>

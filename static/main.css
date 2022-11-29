@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: #495057;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-weight: 500;
+  margin: 0rem;
+  padding: 0rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: 8px;
+  color: #ff5454;
+}
+
+#hero p {
+  color: #495057;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+#hero img {
+  height: 80%;
+}
+.main{
+  margin-top:1rem;
+  padding: 12px;
+}
+.last{
+  height: 30vh;
+}
+canvas {
+  border: 3px solid #ff5454;
+  border-radius: 8px;
+}
+#digit {
+  color: #17a2b8;
+}
+#accuracy {
+  color: #2d7665;
+}
+.predict {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.button {
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+.button-1 {
+  background: #f05d7f;
+  box-shadow: #f05dd7 0 10px 20px -10px;
+}
+.button-2 {
+  background: #5e5df0;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+}
+footer {
+  font-family: "Ubuntu", sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .section {
+    display: block !important;
+    padding: 0;
+  }
+  .right {
+    padding: 0 !important;
+  }
+  #hero img {
+    width: 50%;
+    height: 100% !important;
+  }
+  #hero p {
+  font-size: 16px;
+}
+  footer {
+    font-size: 12px;
+  }
+}
