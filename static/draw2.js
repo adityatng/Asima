@@ -19,6 +19,7 @@ canvas.addEventListener('pointermove', function(e) {
   mouse.y = e.pageY - this.offsetTop;
 }, false);
 
+ctx.lineWidth = 10;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.strokeStyle = 'black';
