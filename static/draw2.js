@@ -22,6 +22,8 @@ canvas.addEventListener('pointermove', function(e) {
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.strokeStyle = 'black';
+ctx.fillStyle = 'white';
+ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
 canvas.addEventListener('pointerdown', function(e) {
   mouse.x = e.pageX - this.offsetLeft;
@@ -50,7 +52,7 @@ function clearArea() {
             }
 function save_image() {
               const link = document.createElement('a');
-              var image = canvas.toDataURL();
+              var image = canvas.toDataURL('image/jpeg');
               console.log(image);
               // clearArea();
               $.ajax({
