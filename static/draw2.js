@@ -2,7 +2,7 @@ var canvas = document.getElementById('myCanvas');
 var ctx = canvas.getContext('2d');
 
 var app = document.getElementById('app');
-canvas.width = 250;
+canvas.width = 200;
 canvas.height = 200;
 
 var mouse = {x: 0, y: 0};
