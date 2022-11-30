@@ -14,7 +14,7 @@ app = Flask(__name__)
 minify(app=app, html=True, js=True, cssless=True)
 
 # Parameters
-input_size = (200, 200)
+input_size = (30, 30)
 # define input shape
 channel = (3,)
 input_shape = input_size + channel
