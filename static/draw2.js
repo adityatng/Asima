@@ -22,8 +22,8 @@ canvas.addEventListener('pointermove', function(e) {
 ctx.lineWidth = 10;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.strokeStyle = 'black';
-ctx.fillStyle = 'white';
+ctx.strokeStyle = 'White';
+ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
 canvas.addEventListener('pointerdown', function(e) {
