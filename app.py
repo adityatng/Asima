@@ -59,7 +59,17 @@ def predict_fit(image_data):
     model = load_model(MODEL_PATH, compile=False)
     img = base64.b64decode(image_data)
     im = Image.open(io.BytesIO(img))
-    X = preprocess(im, input_size)
+
+    #adding bgcolor
+    fill_color = (225,225,225)  # your new background color
+    im = im.convert("RGBA")   # it had mode P after DL it from OP
+    if im.mode in ('RGBA', 'LA'):
+        background = Image.new(im.mode[:-1], im.size, fill_color)
+        background.paste(im, im.split()[-1]) # omit transparency
+        im = background
+    im.convert("RGB")
+
+    X = preprocess(im, input_size2)
     X = reshape([X])
     y = model.predict(X)
 
