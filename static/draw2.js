@@ -19,12 +19,11 @@ canvas.addEventListener('pointermove', function(e) {
   mouse.y = e.pageY - this.offsetTop;
 }, false);
 
-ctx.lineWidth = 10;
+ctx.lineWidth = 8;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.strokeStyle = 'White';
-ctx.fillStyle = 'black';
-ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+ctx.strokeStyle = '#000000';
+ctx.stroke();
 
 canvas.addEventListener('pointerdown', function(e) {
   mouse.x = e.pageX - this.offsetLeft;
@@ -53,7 +52,7 @@ function clearArea() {
             }
 function save_image() {
               const link = document.createElement('a');
-              var image = canvas.toDataURL('image/jpeg');
+              var image = canvas.toDataURL();
               console.log(image);
               // clearArea();
               $.ajax({
