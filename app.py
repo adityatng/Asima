@@ -15,7 +15,6 @@ minify(app=app, html=True, js=True, cssless=True)
 
 # Parameters
 input_size = (200, 200)
-input_size2 = (30, 30)
 # define input shape
 channel = (3,)
 input_shape = input_size + channel
@@ -69,7 +68,7 @@ def predict_fit(image_data):
         im = background
     im.convert("RGB")
 
-    X = preprocess(im, input_size2)
+    X = preprocess(im, input_size)
     X = reshape([X])
     y = model.predict(X)
 
