@@ -69,7 +69,7 @@ function save_image() {
                 }
               }).done(function(result) {
                 digit.innerHTML = result.character
-                aksara.innerHTML = result.aksara + '%'
+                aksara.innerHTML = result.aksara
                 pr.innerHTML = 'Hasil Prediksi'
                
               });
