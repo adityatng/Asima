@@ -49,7 +49,7 @@ function clearArea() {
               ctx.setTransform(1, 0, 0, 1, 0, 0);
               ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
               $('#digit').html('');
-              $('#accuracy').html('');
+              $('#aksara').html('');
               $('#p').html('');
             }
 function save_image() {
