@@ -10,7 +10,7 @@ var mouse = {x: 0, y: 0};
 
 var digit, accuracy,pr
     digit = document.getElementById('digit');
-    accuracy = document.getElementById('accuracy');
+    accuracy = document.getElementById('aksara');
     pr = document.getElementById('p');
 
 
@@ -69,7 +69,7 @@ function save_image() {
                 }
               }).done(function(result) {
                 digit.innerHTML = result.character
-                accuracy.innerHTML = result.accuracy + '%'
+                aksara.innerHTML = result.aksara + '%'
                 pr.innerHTML = 'Hasil Prediksi'
                
               });

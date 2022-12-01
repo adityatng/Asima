@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 html {
   scroll-behavior: smooth;
@@ -68,6 +69,14 @@ canvas {
 #digit {
   color: #17a2b8;
 }
+@font-face{
+  font-family:"aksara_simalungun";
+  src:url('../static/fonts/SIMALUNG.TTF') format("opentype")
+}
+#aksara{
+  font-family:'aksara_simalungun';
+}
+
 #accuracy {
   color: #2d7665;
 }

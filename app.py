@@ -73,7 +73,9 @@ def predict_fit(image_data):
     y = model.predict(X)
 
     res1 = labels[np.argmax(y)]
-    res2 = (100 * np.max(y)).round(2)
+    res2 = res1.replace("Ha", "k").replace("Ka", "k").replace("Ba", "b").replace("Pa", "p").replace("Na", "n").replace("Wa", "w").replace("Ga", "g").replace("Ja", "j").replace("Da", "d").replace("Ra", "r").replace("Ma", "m").replace("Ta", "t").replace("Sa", "s").replace("Ya", "y").replace("Nga", "<").replace("La", "l").replace("nya", "[").replace("A", "a")
+    res2 = '( '+res2+' )'
+    # res2 = (100 * np.max(y)).round(2)
     return res1, res2
 
 
@@ -89,8 +91,9 @@ def predict():
         print("predict" + img_base64)
         image_data = re.sub("^data:image/.+;base64,", "", img_base64)
 
-        digit, accuracy = predict_fit(image_data)
-        results = {"character": str(digit), "accuracy": float(accuracy)}
+        digit, aksara = predict_fit(image_data)
+        # results = {"character": str(digit), "accuracy": float(accuracy)}
+        results = {"character": str(digit), "aksara": str(aksara)}
         return jsonify(results)
     else:
         return "Predict"
