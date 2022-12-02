@@ -19,7 +19,7 @@ input_size = (100, 100)
 labels = ['A', 'Ba', 'Da', 'Ga', 'Ha', 'I', 'Ja', 'Ka', 'La', 'Ma', 'Na', 'Nga', 'Nya', 'Pa', 'Ra', 'Sa', 'Ta', 'U', 'Wa', 'Ya']
 
 def predict_fit(image_data):
-    MODEL_PATH = "model/asima2_Model.h5"
+    MODEL_PATH = "../model/asima2_Model.h5"
     model = load_model(MODEL_PATH, compile=False)
     img = base64.b64decode(image_data)
     im = Image.open(io.BytesIO(img))
