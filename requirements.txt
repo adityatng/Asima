@@ -8,7 +8,6 @@ Jinja2
 itsdangerous
 Markupsafe
 keras
-tensorflow-cpu
 gevent
 h5py
 Pillow

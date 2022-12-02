@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_minify import minify
-import tensorflow as tf
+# import tensorflow as tf
 from keras.models import load_model
 # from keras.utils import img_to_array
 import re
-import pandas as pd
+# import pandas as pd
 import numpy as np
 import base64
 import io
@@ -25,6 +25,7 @@ def predict_fit(image_data):
     img = Image.open(io.BytesIO(img))
 
     #adding bgcolor
+    fill_color = (225,225,225)  # your new background color
     img = img.convert("RGBA")   # it had mode P after DL it from OP
     if img.mode in ('RGBA', 'LA'):
         background = Image.new(img.mode[:-1], img.size, fill_color)
