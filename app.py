@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_minify import minify
 import tensorflow as tf
 from keras.models import load_model
-from keras.utils import img_to_array
+# from keras.utils import img_to_array
 import re
 import pandas as pd
 import numpy as np
@@ -22,7 +22,7 @@ def predict_fit(image_data):
     MODEL_PATH = "model/asima2_Model.h5"
     model = load_model(MODEL_PATH, compile=False)
     img = base64.b64decode(image_data)
-    im = Image.open(io.BytesIO(img))
+    img = Image.open(io.BytesIO(img))
 
     #adding bgcolor
     img = img.convert("RGBA")   # it had mode P after DL it from OP
