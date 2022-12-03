@@ -8,12 +8,6 @@ canvas.height = 150;
 var mouse = {x: 0, y: 0};
 
 
-var digit, accuracy,pr
-    digit = document.getElementById('digit');
-    accuracy = document.getElementById('aksara');
-    pr = document.getElementById('p');
-
-
 canvas.addEventListener('pointermove', function(e) {
   mouse.x = e.pageX - this.offsetLeft;
   mouse.y = e.pageY - this.offsetTop;
@@ -49,7 +43,7 @@ function clearArea() {
               ctx.setTransform(1, 0, 0, 1, 0, 0);
               ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
               $('#digit').html('');
-              $('#aksara').html('');
+              $('.ak').html('');
               $('#p').html('');
             }
 function save_image() {
@@ -64,13 +58,13 @@ function save_image() {
                   imageBase64: image
                 },
                 beforeSend: function() {
-                  pr.innerHTML = "Memproses masukan Anda...";
+                  $('#pr').html('Memproses masukan Anda...');
 
                 }
               }).done(function(result) {
-                digit.innerHTML = result.character
-                aksara.innerHTML = result.aksara
-                pr.innerHTML = 'Hasil Prediksi'
+                $('#digit').html(result.character);
+                $('.ak').html(result.aksara);
+                $('#pr').html('Hasil Prediksi');
                
               });
             }
