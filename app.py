@@ -1,13 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_minify import minify
-
-# import tensorflow as tf
 from keras.models import load_model
-
-# from keras.utils import img_to_array
 import re
-
-# import pandas as pd
 import numpy as np
 import base64
 import io
