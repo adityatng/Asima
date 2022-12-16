@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="id-ID">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" author="adityatng">
-  <title>Asima | Pengenalan Tulisan Tangan Aksara Simalungun</title>
-  <link rel="icon" href="/static/rumah-adat-batak.png">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../static/main.css">
-
-</head>
-<body>
-<section id="hero" class="d-flex align-items-center vh-80">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" author="adityatng">
+    <title>Asima | Pengenalan Tulisan Tangan Aksara Simalungun</title>
+    <link rel="icon" href="/static/rumah-adat-batak.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+  </head>
+  <body>
+    <section id="hero" class="d-flex align-items-center vh-80">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
             <div>
               <h1>Asima</h1>
-              <p style="text-align:justify;">Aplikasi pengenalan tulisan tangan Aksara Simalungun. Menggunakan AI sebagai backend yang dapat secara otomatis mendeteksi karakter. Aplikasi ini juga bagian dari <span class="text-danger" style="cursor:pointer;" onclick="location.href='https://bio.link/tataring'">Tataring - AASC</span> .</p>
+              <p style="text-align:justify;">Aplikasi pengenalan tulisan tangan Aksara Simalungun. Menggunakan AI sebagai backend yang dapat secara otomatis mendeteksi karakter. Aplikasi ini juga bagian dari <span class="text-danger" style="cursor:pointer;" onclick="location.href='https://bio.link/tataring'">Tataring - AASC</span> . </p>
             </div>
           </div>
           <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img text-center" data-aos="fade-left">
@@ -29,59 +27,57 @@
       </div>
     </section>
     <section class="main">
-    <div class="section d-flex text-center justify-content-center align-items-center p-3">
-      <div id="app">
-        <p>Silahkan tulis aksara Simalungun di kotak putih, prediksi model akan muncul setelah Anda menekan Prediksi! </p>
-        <div id="aksara">
-          <h5>Aksara Simalungun</h5>
-           <span>a</span>
-           <span>b</span>
-           <span>d</span>
-           <span>g</span>
-           <span>k</span>
-           <span>I</span>
-           <span>j</span>
-           <span>k</span>
-           <span>l</span>
-           <span>m</span>
-           <span>n</span>
-           <span><</span>
-           <span>[</span>
-           <span>p</span>
-           <span>r</span>
-           <span>s</span>
-           <span>t</span>
-           <span>U</span>
-           <span>w</span>
-           <span>y</span>
-        </div>
+      <div class="section d-flex text-center justify-content-center align-items-center p-3">
+        <div id="app">
+          <p>Silahkan tulis aksara Simalungun di kotak putih, prediksi model akan muncul setelah Anda menekan Prediksi!</p>
+          <div id="aksara">
+            <h5>Aksara Simalungun</h5>
+            <span>a</span>
+            <span>b</span>
+            <span>d</span>
+            <span>g</span>
+            <span>k</span>
+            <span>I</span>
+            <span>j</span>
+            <span>k</span>
+            <span>l</span>
+            <span>m</span>
+            <span>n</span>
+            <span>< </span>
+            <span>[</span>
+            <span>p</span>
+            <span>r</span>
+            <span>s</span>
+            <span>t</span>
+            <span>U</span>
+            <span>w</span>
+            <span>y</span>
+          </div>
           <canvas id="myCanvas" width="250" height="150"></canvas>
           <div class="d-block text-center p-3">
-        <div class="ndiv">
-          <p id="p"></p>
-        </div>
-        <div class="predict align-items-center justify-content-center mb-5">
-          <div class="mx-2 d-flex">
-            <p>Aksara:&nbsp;</p>
-            <span id="digit"></span>&nbsp;<span id="aksara" class="ak"></span>
+            <div class="ndiv">
+              <p id="p"></p>
+            </div>
+            <div class="predict align-items-center justify-content-center mb-5">
+              <div class="mx-2 d-flex">
+                <p>Aksara:&nbsp;</p>
+                <span id="digit"></span>&nbsp; <span id="aksara" class="ak"></span>
+              </div>
+              <div class="mx-2 d-flex" id="download">
+                <!-- <p>Akurasi:&nbsp;</p><span id="accuracy"></span> -->
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="button button-1" onclick="javascript:clearArea();return false;">Bersihkan</button>
+              <button class="button button-2" onclick="javascript:save_image();return false;">Prediksi</button>
+            </div>
           </div>
-          <div class="mx-2 d-flex" id="download">
-            <!-- <p>Akurasi:&nbsp;</p>
-            <span id="accuracy"></span> -->
-          </div>
-        </div>
-        <div class="text-center">
-          <button class="button button-1" onclick="javascript:clearArea();return false;">Bersihkan</button>
-          <button class="button button-2" onclick="javascript:save_image();return false;">Prediksi</button>
         </div>
       </div>
-      </div>
-    </div>
-  </section>
-  <section class="last"></section>
- <footer class="text-center py-4 mt-5">
-  &copy; 2022 Asima by <a href='https://adityatng.web.app'>adityatng</a>
- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
- <script src="../static/draw2.js"></script> 
-</body>
+    </section>
+    <section class="last"></section>
+    <footer class="text-center py-4 mt-5"> &copy; 2022 Asima by <a href='https://adityatng.web.app'>adityatng</a>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="../static/draw.js"></script>
+  </body>
 </html>

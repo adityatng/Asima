@@ -1,45 +1,42 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_minify import minify
 from keras.models import load_model
-import re
-import numpy as np
-import base64
-import io
 from PIL import Image
+import re, io, base64
+import numpy as np
+
 
 app = Flask(__name__)
 minify(app=app, html=True, js=True, cssless=True)
 
 
-# define input_size
 input_size = (100, 100)
-# define labels
 labels = ['A', 'Ba', 'Da', 'Ga', 'Ha', 'I', 'Ja', 'Ka', 'La', 'Ma', 'Na', 'Nga', 'Nya', 'Pa', 'Ra', 'Sa', 'Ta', 'U', 'Wa', 'Ya']
 labels_rep = ['a', 'b', 'd', 'g', 'k', 'I', 'j', 'k', 'l', 'm', 'n', '<', '[', 'p', 'r', 's', 't', 'U', 'w', 'y']
 
 
 def predict_fit(image_data):
-    MODEL_PATH = "./asima_Model.h5"
+    MODEL_PATH = "./asima_model.h5"
     model = load_model(MODEL_PATH, compile=False)
-    
+
     img = base64.b64decode(image_data)
     img = Image.open(io.BytesIO(img))
-    # adding bgcolor
-    fill_color = (225, 225, 225)  # your new background color
-    img = img.convert("RGBA")  # it had mode P after DL it from OP
+    # menambah background pada gambar
+    fill_color = (225, 225, 225)  # warna background
+    img = img.convert("RGBA")
     if img.mode in ("RGBA", "LA"):
         background = Image.new(img.mode[:-1], img.size, fill_color)
-        background.paste(img, img.split()[-1])  # omit transparency
+        background.paste(img, img.split()[-1])  # menghilangkan transparansi
         img = background
     img = img.convert("RGB").resize(input_size, resample=0)
 
-    x = (np.array(img)) / 255  # image2Arr
-    x = np.expand_dims(x, axis=0)
-    images = np.vstack([x])
+    x = (np.array(img)) / 255  # mengkonversikan gambar ke numpy array
+    x = np.expand_dims(x, axis=0)  # memperluas bentuk array
+    images = np.vstack([x])  # menggabungkan array NumPy
 
-    classes = model.predict(images, batch_size=32)
+    classes = model.predict(images, batch_size=32)  # memprediksi
 
-    res1 = labels[np.argmax(classes)]
+    res1 = labels[np.argmax(classes)]  # mengambil nilai tertingi dari array
     res2 = labels_rep[np.argmax(classes)]
     res2 = "(" + res2 + ")"
     return res1, res2

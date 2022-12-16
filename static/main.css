@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 html {
   scroll-behavior: smooth;
@@ -22,7 +21,7 @@ h6 {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
 }
-a{
+a {
   text-decoration: none;
   color: #495057;
 }
@@ -43,20 +42,20 @@ a{
 #hero img {
   height: 80%;
 }
-.main{
-  margin-top:3rem;
+.main {
+  margin-top: 3rem;
   padding: 12px;
 }
-.last{
+.last {
   height: 30vh;
 }
-#app{
+#app {
   background: #384047;
-  color:#fff;
+  color: #fff;
   padding: 1em;
   border-radius: 12px;
 }
-#app p{
+#app p {
   text-align: justify;
   font-size: 14px;
 }
@@ -73,12 +72,12 @@ canvas {
 #digit {
   color: #17a2b8;
 }
-@font-face{
-  font-family:"aksara_simalungun";
-  src:url('../static/fonts/SIMALUNG.TTF') format("opentype")
+@font-face {
+  font-family: "aksara_simalungun";
+  src: url("../static/fonts/SIMALUNG.TTF") format("opentype");
 }
-#aksara{
-  font-family:'aksara_simalungun';
+#aksara {
+  font-family: "aksara_simalungun";
 }
 
 #accuracy {
@@ -131,8 +130,8 @@ footer {
     height: 100% !important;
   }
   #hero p {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
   footer {
     font-size: 12px;
   }
